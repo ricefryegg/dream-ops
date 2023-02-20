@@ -1,0 +1,25 @@
+services:
+  dreambooth:
+    image: dreambooth:cu11.8
+    build:
+      context: ./dreambooth
+    volumes:
+      - ./dreambooth:/dreambooth
+      - models:/models
+    
+    # all following equals --gpus all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+
+volumes:
+  models:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./models
+      o: bind
