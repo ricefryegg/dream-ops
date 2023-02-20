@@ -1,10 +1,19 @@
+
+# Dream Ops
+
+- [Dream Ops](#dream-ops)
+  - [Quick Start](#quick-start)
+  - [Configurations](#configurations)
+  - [References](#references)
+
 `dream-ops` is a containerized photo pipeline to customize Stable Difussion Models. It automatically crops faces in the photos. 
 
 `dream-ops` requires a NVIDIA GPU to run, tested on RTX A5000.
 
-- [Quick Start](#quick-start)
-- [Configurations](#configurations)
-- [References](#references)
+Great thanks to my friend [Xinyuan](https://www.linkedin.com/in/xinyuanliu/) for allowing me to use his photos, you look stunning!
+
+![img](./dreambooth/assets/xinyuan.png)
+
 
 ## Quick Start
 
