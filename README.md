@@ -4,6 +4,7 @@
 - [Dream Ops](#dream-ops)
   - [Quick Start](#quick-start)
   - [Configurations](#configurations)
+  - [TODOs](#todos)
   - [References](#references)
 
 `dream-ops` is a containerized photo pipeline to customize Stable Difussion Models. It automatically crops faces in the photos. 
@@ -38,6 +39,15 @@ After cloning the repo, you can run the following commands in `./` directory:
 ## Configurations
 
 In `./config.yml`, todo.
+
+## TODOs
+
+- [x] Reproduce tutorial results and choose approch
+- [x] Customize input image and get acceptable results
+- [x] Local training and dockerize
+- [x] Dreambooth on any model? -> huggingface
+- [x] Face auto crop & auto resize
+- [ ] 
 
 ## References
 
