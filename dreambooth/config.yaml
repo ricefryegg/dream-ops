@@ -1,0 +1,34 @@
+dreambooth:
+  dry_run: False # print training command without running
+  sd_model_path: /models/Stable-diffusion
+  # model path in huggingface.co
+  pretrained_model_name_or_path: "SG161222/Realistic_Vision_V1.3"
+  # trigger word of custom subject, also the name of top level folder
+  #   in ./data directory
+  instances:
+    - id: "dbexmpl" # folder name under ./data for custom subject
+      # trigger prompt with the unique word for the custom subject
+      instance_prompt: photo of dbexmpl person
+      class_prompt: photo of a person
+      # prompt to generate sample photos during training
+      crop_face: True # if to crop face from the photo
+  
+  max_train_steps: 800 # total training steps
+  save_sample_prompt: "photo of dbexmpl person in RAW photo, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3"
+  save_interval: 100 # save model and generate sample per interval
+  sample_batch_size: 10 # number of samples to generate
+  resolution: 512
+  train_batch_size: 1
+  gradient_accumulation_steps: 1
+  learning_rate: "1e-6"
+  lr_scheduler: "constant"
+  lr_warmup_steps: 0
+  seed: 42
+  # optional?
+  pretrained_vae_name_or_path: stabilityai/sd-vae-ft-mse
+  with_prior_preservation: True 
+  prior_loss_weight: 1.0
+  train_text_encoder: True
+  mixed_precision: fp16
+  use_8bit_adam: True
+  num_class_images: 10 # number of images to use for class conditioning
