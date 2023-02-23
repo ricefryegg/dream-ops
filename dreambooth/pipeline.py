@@ -121,7 +121,7 @@ if __name__ == "__main__":
         "--half"
     ]
     convert_ckpt_command = " \\\n    ".join(convert_ckpt_command)
-    move_ckpts_command = f'mv {ckpt_filepath} {config.get("sd_model_path")/ckpt_filename}'
+    move_ckpts_command = f'mv {ckpt_filepath} {config.get("sd_model_path")}/{ckpt_filename}'
 
     if config.get("dry_run"):
         print("\nTraining command \n================\n" + train_command)

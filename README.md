@@ -31,7 +31,7 @@ After cloning the repo, you can run the following commands in `./` directory:
     docker run --rm -it \
         --hostname `hostname` \
         --gpus all --ipc=host \
-        -v .:/dreambooth \
+        -v ./dreambooth:/dreambooth \
         dream-ops:cu11.8 bash
     ```
 2. Start pipeline: `python3 pipeline.py` and follow the instructions to put your images in the right place.
